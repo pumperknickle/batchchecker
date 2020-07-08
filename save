@@ -1,0 +1,13 @@
+for token in doc:
+      regToken = token.text.lower().translate(str.maketrans('', '', string.punctuation))
+      if acronymPattern.match(token.text) and (not regToken in defined_nouns):
+        start_term = token.idx
+        end_term = token.idx + len(token.text)
+        all_matches += 1
+        if not overlap(match_ents, start_term, end_term) and not overlap(quantity_spans, start_term, end_term):
+          match_ents.append({
+            "start": start_term,
+            "end": end_term,
+            "label": "UNDEFINED TERM"
+          })
+

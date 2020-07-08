@@ -1,0 +1,700 @@
+<h2 style="margin: 0">Metrics</h2>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Out of 774 words, 94 potential ambiguities were detected.</div>
+
+<h2 style="margin: 0">/Users/jbao/Documents/Requirements Quality Toolkit/Definition</h2>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">RQT is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of standardized data models, natural language analysis tools, 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ integrated user interfaces that provide comprehensive facilities to engineers for requirements development. RQT will analyze requirements 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ sets of requirements through four metrics: quality, consistency, completeness, 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ similarity through natural language 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ statistical models. This feedback to the requirements engineer will display 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    directly
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE ADVERB</span>
+</mark>
+ through the compatible editor 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    or
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ through static reports generated. RQT's main goal is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    to accelerate
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INFINITIVE</span>
+</mark>
+ requirements development 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    while
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ also increasing the quality of the developed requirements.
+</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Directly is an vague adverb. Vague adverbs can lead to ambiguous, unverifiable requirements that do not accurately reflect the stakeholder expectations.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">To accelerate is a superflous infinitive. Requirements containing such superfluous verbs can cause problems in verification.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Or is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">While is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<h2 style="margin: 0">/Users/jbao/Documents/Requirements Quality Toolkit/Standardized Requirements Model/Definition</h2>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">The standardized requirements model is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ specification on 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    what
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">PRONOUN</span>
+</mark>
+ 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ requirement is, 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ how sets of requirements are organized into broader requirements. The model will include integrations to 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ from other data types that work with other systems such 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    as
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ DOORS.
+
+</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">What is a pronoun. Pronouns are effectively cross-references to nouns and are ambiguous and should be avoided.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">As is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<h2 style="margin: 0">/Users/jbao/Documents/Requirements Quality Toolkit/Requirements Analysis/Definition</h2>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">The requirements analysis module is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of specifications 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ implementations that indicate 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ source of ambiguity on 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ single requirement 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    or
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of requirements.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Or is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<h2 style="margin: 0">/Users/jbao/Documents/Requirements Quality Toolkit/Requirements Analysis/Validator/Requirements</h2>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">The validator shall contain the property validatorConfiguration that is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    an
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ instance of 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ Validation Configuration.</br></br>The validator shall set the property validatorConfiguration with the Validation Configuration parameter 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the setValidatorConfiguration function is called.</br></br>The validator shall return the index ranges in the string parameter that 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    exactly
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE ADVERB</span>
+</mark>
+ match 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    any
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ string in the forbiddenLexemes property in the validatorConfiguration property 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the getForbiddenLexemes function is called.</br></br>The validator shall return the index ranges in the string parameter that 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    exactly
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE ADVERB</span>
+</mark>
+ match 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    any
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ string in the discouragedLexemes property in the validatorConfiguration property 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the getDiscouragedLexemes function is called.</br></br>The validator shall return the index ranges 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ corresponding Regular Expressions in the string parameter that 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    exactly
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE ADVERB</span>
+</mark>
+ matches 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    any
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Regular Expression in the forbiddenRegexes property in the validatorConfiguration property 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the getForbiddenRegexMatches function is called.</br></br>The validator shall return the index ranges 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ corresponding Regular Expressions in the string parameter that 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    exactly
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE ADVERB</span>
+</mark>
+ matches 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    any
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Regular Expression in the discouragedRegexes property in the validatorConfiguration property 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the getDiscouragedRegexMatches function is called.</br></br>The validator shall return the index ranges in the string parameter of 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    all
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ passive verbs 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the getPOS function is called with the POS parameter equal to passive verbs.</br></br>The validator shall return the index ranges in the string parameter of 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    all
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ adverbs 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the getPOS function is called with the POS parameter equal to adverbs.</br></br>The validator shall return the index ranges in the string parameter of 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    all
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ adjectives 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the getPOS function is called with the POS parameter equal to adjectives.</br></br>The validator shall return the index ranges in the string parameter of 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    all
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ infinitives 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the getInfinitives function is called.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Exactly is an vague adverb. Vague adverbs can lead to ambiguous, unverifiable requirements that do not accurately reflect the stakeholder expectations.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Exactly is an vague adverb. Vague adverbs can lead to ambiguous, unverifiable requirements that do not accurately reflect the stakeholder expectations.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Exactly is an vague adverb. Vague adverbs can lead to ambiguous, unverifiable requirements that do not accurately reflect the stakeholder expectations.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Exactly is an vague adverb. Vague adverbs can lead to ambiguous, unverifiable requirements that do not accurately reflect the stakeholder expectations.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">An is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Any is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Any is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Any is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Any is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<h2 style="margin: 0">/Users/jbao/Documents/Requirements Quality Toolkit/Requirements Analysis/Validator/Definition</h2>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    A
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ validator determines the correctness of 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ single requirement with 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of validation functions.
+</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<h2 style="margin: 0">/Users/jbao/Documents/Requirements Quality Toolkit/Requirements Analysis/Validator/Validator Configuration/Requirements</h2>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Validator Configuration instances shall have the property called categories which contain 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of Trigger Word Categories instances.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Trigger Word Categories contain the property called name which is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ string.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Trigger Word Categories contain the property called forbiddenLexemes which is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of strings.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Trigger Word Categories contain the property called discouragedLexemes which is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of strings.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Validator Configuration instances shall have the property called acceptedPassiveVerbs which is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of strings.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Validator Configuration instances shall have the property called acceptedAdverbs which is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of strings.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Validator Configuration instances shall have the property called acceptedAdjectives which is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of strings.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Validator Configuration instances shall have the property called acceptedInfinitives which is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of strings.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Validator Configuration instances shall return the JSON representation string 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the toString function is called.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    When
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the decodeJSON function is called, The decoded Validator Configuration instance shall be returned given the JSON representation string parameter.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Validator Configuration instances should return the description of the INCOSE rule given the category 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ the matched trigger word.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Validator Configuration instances should return 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    all
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ categories where the forbiddenLexemes property contains the string parameter 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the forbiddenMatches function is called.</br></br>
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    All
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Validator Configuration instances should return 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    all
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ categories where the discouragedLexemes property contains the string parameter 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    when
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the discouragedMatches function is called.</br></br>The property allForbiddenLexemes shall be derived 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    as
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the union of the forbiddenLexemes property in 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    all
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Trigger Word Categories.</br></br>The property allDiscouragedLexemes shall be derived 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    as
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TEMPORAL DEPENDENCY</span>
+</mark>
+ the union of the discouragedLexemes property in 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    all
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">VAGUE QUANTIFIER</span>
+</mark>
+ Trigger Word Categories.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">When is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">As is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">As is a temporal dependency. Some words and phrases signal non-specific timing and should be replaced by specific timing constraints.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">All is a vague quantifier. Vague quantifiers indicate quantities that cannot be objectively measured. Such terms are inherently ambiguous and must be replaced by specific, measurable quantities.</div>
+
+<h2 style="margin: 0">/Users/jbao/Documents/Requirements Quality Toolkit/Report Generation/Definition</h2>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">The report generation module uses the Requirements Analysis (RA) Module 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    to create
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INFINITIVE</span>
+</mark>
+ 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ report on 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of requirements detailing the sources of ambiguity 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ the reason for ambiguity. Furthermore, 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    it
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">PRONOUN</span>
+</mark>
+ provides metrics on the overall quality of 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of requirements which can be configured 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    to emphasize
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INFINITIVE</span>
+</mark>
+ 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    or
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ ignore certain indicators.
+
+</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">To create is a superflous infinitive. Requirements containing such superfluous verbs can cause problems in verification.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">It is a pronoun. Pronouns are effectively cross-references to nouns and are ambiguous and should be avoided.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">To emphasize is a superflous infinitive. Requirements containing such superfluous verbs can cause problems in verification.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Or is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
+
+<h2 style="margin: 0">/Users/jbao/Documents/Requirements Quality Toolkit/Requirements Language Server/Definition</h2>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">The standardized ontology model is 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ specification on the metadata stored for 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ set of requirements. 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    It
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">PRONOUN</span>
+</mark>
+ contains lexemes extracted for 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    a
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">INDEFINITE ARTICLE</span>
+</mark>
+ SRM 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    and
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">COMBINATOR</span>
+</mark>
+ semantic relations that exist among 
+<mark class="entity" style="background: yellow; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    them
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">PRONOUN</span>
+</mark>
+.
+</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">It is a pronoun. Pronouns are effectively cross-references to nouns and are ambiguous and should be avoided.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">Them is a pronoun. Pronouns are effectively cross-references to nouns and are ambiguous and should be avoided.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">A is the indefinite article. When referring to entities, use of the indefinite article can lead to ambiguity.</div>
+
+<div class="entities" style="line-height: 2.5; direction: ltr">And is a combinator. Combinators are conjunctions and other words and phrases that combine clauses. Their presence in requirements often indicates that the statement contains more than one requirement and should be broken up.</div>
