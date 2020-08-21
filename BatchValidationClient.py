@@ -10,7 +10,7 @@ import codecs
 from rake_nltk import Metric, Rake
 import pygtrie
 from SuffixTrie import insertSuffixes
-from DefinedNounsExtractor import extract_defined_nouns_from_all
+from DefinedNounsExtractor import extract_defined_nouns_from_all, defined_nouns_from_av2
 from AcronymExtractor import extractAcronymsAndPhrases, extractAllAcronyms, extractAcronymsFromPhrases
 from DocExtractor import getTextFromDoc
 import en_core_web_sm
@@ -30,9 +30,12 @@ total_words = 0
 total_matches = 0
 texts = []
 minimum_keyword_score = 2
+av2file = 'AV-2.xlsx'
+av2path = os.path.join(folder_selected, av2file)
 
 for path in Path(folder_selected).rglob('*'):
-    if path.is_file() and not(os.path.basename(path).startswith('.')) and not(os.path.basename(path) == 'RQT_report.html'):
+    if path.is_file() and not(os.path.basename(path).startswith('.')) and not(os.path.basename(path) == 'RQT_report.html') and not(path.suffix == ".xlsx"):
+      print(path)
       if path.suffix == ".docx":
         doc_texts = getTextFromDoc(path)
         texts.append((doc_texts, path))
@@ -57,6 +60,10 @@ for phraseWithScore in phrasesWithScores:
   insertSuffixes(keySuffixTrie, phrase, score)
 docs = map(lambda x: nlp(x[0]), texts)
 defined_nouns = extract_defined_nouns_from_all(docs, keySuffixTrie, phraseAcronymsLinks)
+if os.path.exists(av2path):
+  defined_nouns = defined_nouns.union(defined_nouns_from_av2(av2path, phraseAcronymsLinks))
+print(defined_nouns)
+
 
 for inputText, reqPath in texts:
   requirements = inputText.split('\n')
@@ -77,7 +84,6 @@ for inputText, reqPath in texts:
     all_match_ents.append({"text": req, "ents": file_match_ents.copy(), "title": str(reqPath) + " " + str(i+1)})
 
 
-print(all_metrics)
 metricsText = "Out of " + str(total_words) + " words, " + str(total_matches) + " potential ambiguities were detected."
 metrics.append({"text": metricsText, "ents": [], "title": "Metrics"})
 
