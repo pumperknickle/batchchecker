@@ -38,7 +38,7 @@ def spell_check(doc, raw_terms):
     for token in doc:
         word = token.text
         misspelled = spell.unknown([word])
-        if len(misspelled) != 0:
+        if len(misspelled) != 0 and not word.startswith("'"):
             all_matches += 1
             total_matches["MISSPELLING"] = total_matches.get("MISSPELLING", 0) + 1
             start = token.idx
