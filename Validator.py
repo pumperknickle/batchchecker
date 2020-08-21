@@ -8,6 +8,7 @@ from DefinedNounsExtractor import get_term_in_noun_chunk
 import en_core_web_sm
 import re
 import string
+from spellchecker import SpellChecker
 
 nlp = en_core_web_sm.load()
 match_ents = []
@@ -18,14 +19,37 @@ comparator_spans = []
 all_matches = 0
 acronymPattern = re.compile("\b[A-Z](?=([&.]?))(?:\1[A-Za-z])*(?:\1[A-Z])\b")
 
+
 def all_labels():
-  return ["OBLIQUE", "NO VALUE RANGE", "MISSING UNIT", "BRACKETS", "PARANTHESES", "MULTIPLE SENTENCES", "UNIVERSAL QUANTIFIER", "VAGUE ADJECTIVE", "VAGUE ADVERB", "PASSIVE VOICE", "INFINITIVE", "PRONOUN", "INDEFINITE ARTICLE", "ESCAPE CLAUSE", "OPEN ENDED CLAUSE", "AVOID NOT", "VAGUE QUANTIFIER", "TEMPORAL DEPENDENCY", "COMBINATOR", "UNACHIEVABLE ABSOLUTE"]
+  return ["OBLIQUE", "MISSPELLING", "NO VALUE RANGE", "MISSING UNIT", "BRACKETS", "PARANTHESES", "MULTIPLE SENTENCES", "UNIVERSAL QUANTIFIER", "VAGUE ADJECTIVE", "VAGUE ADVERB", "PASSIVE VOICE", "INFINITIVE", "PRONOUN", "INDEFINITE ARTICLE", "ESCAPE CLAUSE", "OPEN ENDED CLAUSE", "AVOID NOT", "VAGUE QUANTIFIER", "TEMPORAL DEPENDENCY", "COMBINATOR", "UNACHIEVABLE ABSOLUTE"]
+
 
 def overlap(matches, start, end):
     for match in matches:
         if start < match["end"] and match["start"] < end:
             return True
     return False
+
+
+def spell_check(doc, raw_terms):
+    global all_matches
+    spell = SpellChecker()
+    spell.word_frequency.load_words(raw_terms)
+    for token in doc:
+        word = token.text
+        misspelled = spell.unknown([word])
+        if len(misspelled) != 0:
+            all_matches += 1
+            total_matches["MISSPELLING"] = total_matches.get("MISSPELLING", 0) + 1
+            start = token.idx
+            end = token.idx + len(token.text)
+            if not overlap(match_ents, start, end) and not overlap(definitions, start, end):
+                match_ents.append({
+                    "start": start,
+                    "end": end,
+                    "label": "MISSPELLING",
+                })
+
 
 def match_adverb(matcher, doc, i, matches):
     global all_matches
@@ -354,7 +378,7 @@ def match_comparator(matcher, doc, i, matches):
         "end": span.end_char,
     })
         
-def get_validator_matches(text, strie, defined_nouns):
+def get_validator_matches(text, strie, defined_nouns, raw_terms):
     global all_matches
     match_ents.clear()
     total_matches.clear()
@@ -448,6 +472,7 @@ def get_validator_matches(text, strie, defined_nouns):
 
     doc = nlp(text)
     lowercaseDoc = nlp(text.lower())
+    spell_check(lowercaseDoc, raw_terms)
     definitionMatches = definitionMatcher(lowercaseDoc)
     matches = matcher(doc)
     phraseMatches = phraseMatcher(lowercaseDoc)

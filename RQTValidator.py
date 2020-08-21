@@ -1,4 +1,4 @@
-import spacy
+pytimport spacy
 from spacy import displacy
 from spacy.matcher import Matcher
 from spacy.matcher import PhraseMatcher

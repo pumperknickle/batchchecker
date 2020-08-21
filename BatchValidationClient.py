@@ -10,7 +10,7 @@ import codecs
 from rake_nltk import Metric, Rake
 import pygtrie
 from SuffixTrie import insertSuffixes
-from DefinedNounsExtractor import extract_defined_nouns_from_all, defined_nouns_from_av2
+from DefinedNounsExtractor import extract_defined_nouns_from_all, defined_nouns_from_av2, extract_definitions
 from AcronymExtractor import extractAcronymsAndPhrases, extractAllAcronyms, extractAcronymsFromPhrases
 from DocExtractor import getTextFromDoc
 import en_core_web_sm
@@ -60,6 +60,7 @@ for phraseWithScore in phrasesWithScores:
   insertSuffixes(keySuffixTrie, phrase, score)
 docs = map(lambda x: nlp(x[0]), texts)
 defined_nouns = extract_defined_nouns_from_all(docs, keySuffixTrie, phraseAcronymsLinks)
+raw_terms = []
 if os.path.exists(av2path):
   defined_nouns = defined_nouns.union(defined_nouns_from_av2(av2path, phraseAcronymsLinks))
 print(defined_nouns)
@@ -71,7 +72,7 @@ for inputText, reqPath in texts:
   total_words += len(inputText.split())
   for i in range(len(filteredReqs)):
     req = filteredReqs[i]
-    file_match_ents, match_count, match_metrics = get_validator_matches(req, keySuffixTrie, defined_nouns)
+    file_match_ents, match_count, match_metrics = get_validator_matches(req, keySuffixTrie, defined_nouns, raw_terms)
     total_matches += match_count
     for key in match_metrics: 
       if key in all_metrics: 
