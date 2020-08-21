@@ -9,6 +9,7 @@ import en_core_web_sm
 import re
 import string
 from spellchecker import SpellChecker
+import language_check
 
 nlp = en_core_web_sm.load()
 match_ents = []
@@ -29,6 +30,24 @@ def overlap(matches, start, end):
         if start < match["end"] and match["start"] < end:
             return True
     return False
+
+
+def grammar_check(doc):
+    global all_matches
+    tool = language_check.LanguageTool('en-US')
+    text = doc.text
+    matches = tool.check(text)
+    for match in matches:
+        all_matches += 1
+        total_matches["GRAMMAR ERROR"] = total_matches.get("GRAMMAR ERROR", 0) + 1
+        start = match.fromy
+        end = match.fromx
+        if not overlap(match_ents, start, end) and not overlap(definitions, start, end):
+            match_ents.append({
+                "start": start,
+                "end": end,
+                "label": "GRAMMAR ERROR",
+            })
 
 
 def spell_check(doc, raw_terms):
@@ -472,8 +491,9 @@ def get_validator_matches(text, strie, defined_nouns, raw_terms):
 
     doc = nlp(text)
     lowercaseDoc = nlp(text.lower())
-    spell_check(lowercaseDoc, raw_terms)
     definitionMatches = definitionMatcher(lowercaseDoc)
+    spell_check(lowercaseDoc, raw_terms)
+    grammar_check(doc)
     matches = matcher(doc)
     phraseMatches = phraseMatcher(lowercaseDoc)
     exactMatches = exactMatcher(lowercaseDoc)
