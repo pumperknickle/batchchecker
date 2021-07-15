@@ -1,13 +1,15 @@
 # -*- mode: python ; coding: utf-8 -*-
-
+import sys
+from os import path
+site_packages = next(p for p in sys.path if 'site-packages' in p)
 block_cipher = None
 
 
 a = Analysis(['BatchValidationClient.py'],
              pathex=['/Users/jbao/Validator'],
              binaries=[],
-             datas=[],
-             hiddenimports=['srsly.msgpack.util', 'cymem.cymem', 'thinc.linalg', 'murmurhash.mrmr', 'cytoolz.utils', 'cytoolz._signatures', 'spacy.strings', 'spacy.morphology', 'spacy.lexeme', 'spacy.tokens', 'spacy.gold', 'spacy.tokens.underscore', 'spacy.parts_of_speech', 'dill', 'spacy.tokens.printers', 'spacy.tokens._retokenize', 'spacy.syntax', 'spacy.syntax.stateclass', 'spacy.syntax.transition_system', 'spacy.syntax.nonproj', 'spacy.syntax.nn_parser', 'spacy.syntax.arc_eager', 'thinc.extra.search', 'spacy.syntax._beam_utils', 'spacy.syntax.ner', 'thinc.neural._classes.difference', 'preshed.maps'],
+             datas=[(path.join(site_packages,"quantulum3"), "quantulum3")],
+             hiddenimports=['quantulum3', 'srsly.msgpack.util', 'cymem.cymem', 'thinc.linalg', 'murmurhash.mrmr', 'cytoolz.utils', 'cytoolz._signatures', 'spacy.strings', 'spacy.morphology', 'spacy.lexeme', 'spacy.tokens', 'spacy.gold', 'spacy.tokens.underscore', 'spacy.parts_of_speech', 'dill', 'spacy.tokens.printers', 'spacy.tokens._retokenize', 'spacy.syntax', 'spacy.syntax.stateclass', 'spacy.syntax.transition_system', 'spacy.syntax.nonproj', 'spacy.syntax.nn_parser', 'spacy.syntax.arc_eager', 'thinc.extra.search', 'spacy.syntax._beam_utils', 'spacy.syntax.ner', 'thinc.neural._classes.difference', 'preshed.maps', 'quantulum3._lang'],
              hookspath=['.'],
              runtime_hooks=[],
              excludes=[],

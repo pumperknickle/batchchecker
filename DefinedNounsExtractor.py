@@ -36,13 +36,14 @@ def defined_nouns_from_av2(filename, phraseLinks):
     defined_nouns = set()
     acronymLinks = {v: k for k, v in phraseLinks.items()}
     definitions = extract_definitions(filename)
+    # print(definitions)
     for definition in definitions:
-        doc = nlp(definition)
+        doc = nlp(str(definition))
         for chunk in doc.noun_chunks:
             regToken = chunk.root.text.lower().translate(str.maketrans('', '', string.punctuation))
             if regToken in phraseLinks:
                 defined_nouns.add(phraseLinks[regToken])
-        lemmatizedPhrase = toLemmas(definition.lower())
+        lemmatizedPhrase = toLemmas(str(definition).lower())
         defined_nouns.add(lemmatizedPhrase)
         if lemmatizedPhrase in acronymLinks:
           defined_nouns.add(acronymLinks[lemmatizedPhrase])
@@ -77,10 +78,9 @@ def get_term_in_noun_chunk(trie, chunk, doc):
     maxMatchReturn = maxMatch(trie, chunk)
     if maxMatchReturn is None:
         end = doc[chunk.end - 1].idx + len(doc[chunk.end - 1].text)
-        if doc[chunk.start].pos_ == "DET":
-            start = doc[chunk.start + 1].idx
-            return (start, end)
-        else:
-            start = doc[chunk.start].idx
-            return (start, end)
+        chunkStart = chunk.start
+        while doc[chunkStart].pos_ == "DET" or doc[chunkStart].pos_ == "DET":
+            chunkStart += 1
+        start = doc[chunkStart].idx
+        return start, end
     return maxMatchReturn

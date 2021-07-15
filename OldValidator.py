@@ -3,30 +3,51 @@ from spacy import displacy
 from spacy.matcher import Matcher
 from spacy.matcher import PhraseMatcher
 from Describer import describe
+from quantulum3 import parser
 from DefinedNounsExtractor import get_term_in_noun_chunk
 import en_core_web_sm
 import re
 import string
-# from spellchecker import SpellChecker
+from spellchecker import SpellChecker
 
 nlp = en_core_web_sm.load()
 match_ents = []
 definitions = []
 total_matches = dict()
-# quantity_spans = []
+quantity_spans = []
 comparator_spans = []
 all_matches = 0
 acronymPattern = re.compile("\b[A-Z](?=([&.]?))(?:\1[A-Za-z])*(?:\1[A-Z])\b")
-textLength = 0
+
 
 def all_labels():
   return ["UNDEFINED TERM", "OBLIQUE", "MISSPELLING", "NO VALUE RANGE", "MISSING UNIT", "BRACKETS", "PARANTHESES", "MULTIPLE SENTENCES", "UNIVERSAL QUANTIFIER", "VAGUE ADJECTIVE", "VAGUE ADVERB", "PASSIVE VOICE", "INFINITIVE", "PRONOUN", "INDEFINITE ARTICLE", "ESCAPE CLAUSE", "OPEN ENDED CLAUSE", "AVOID NOT", "VAGUE QUANTIFIER", "TEMPORAL DEPENDENCY", "COMBINATOR", "UNACHIEVABLE ABSOLUTE"]
+
 
 def overlap(matches, start, end):
     for match in matches:
         if start < match["end"] and match["start"] < end:
             return True
     return False
+
+def spell_check(doc, raw_terms):
+    global all_matches
+    spell = SpellChecker()
+    spell.word_frequency.load_words(raw_terms)
+    for token in doc:
+        word = token.text
+        misspelled = spell.unknown([word])
+        if len(misspelled) != 0 and not word.startswith("'"):
+            all_matches += 1
+            total_matches["MISSPELLING"] = total_matches.get("MISSPELLING", 0) + 1
+            start = token.idx
+            end = token.idx + len(token.text)
+            if not overlap(match_ents, start, end) and not overlap(definitions, start, end) and not overlap(quantity_spans, start, end):
+                match_ents.append({
+                    "start": start,
+                    "end": end,
+                    "label": "MISSPELLING",
+                })
 
 
 def match_adverb(matcher, doc, i, matches):
@@ -35,11 +56,12 @@ def match_adverb(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["VAGUE ADVERB"] = total_matches.get("VAGUE ADVERB", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "VAGUE ADVERB",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "VAGUE ADVERB",
+        })
     
 def match_passive(matcher, doc, i, matches):
     global all_matches
@@ -47,11 +69,12 @@ def match_passive(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["PASSIVE VOICE"] = total_matches.get("PASSIVE VOICE", 0) + 1
-    match_ents.append({
-        "start": 0,
-        "end": span.end_char,
-        "label": "PASSIVE VOICE",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "PASSIVE VOICE",
+        })
     
 def match_infinitive(matcher, doc, i, matches):
     global all_matches
@@ -59,11 +82,12 @@ def match_infinitive(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["INFINITIVE"] = total_matches.get("INFINITIVE", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "INFINITIVE",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "INFINITIVE",
+        })
     
 def match_pronoun(matcher, doc, i, matches):
     global all_matches
@@ -71,11 +95,12 @@ def match_pronoun(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["PRONOUN"] = total_matches.get("PRONOUN", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "PRONOUN",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "PRONOUN",
+        })
     
 def match_indefinite_articles(matcher, doc, i, matches):
     global all_matches
@@ -83,11 +108,12 @@ def match_indefinite_articles(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["INDEFINITE ARTICLE"] = total_matches.get("INDEFINITE ARTICLE", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "INDEFINITE ARTICLE",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "INDEFINITE ARTICLE",
+        })
 
 def match_vague_adjectives(matcher, doc, i, matches):
     global all_matches
@@ -95,11 +121,12 @@ def match_vague_adjectives(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["VAGUE ADJECTIVE"] = total_matches.get("VAGUE ADJECTIVE", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "VAGUE ADJECTIVE",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "VAGUE ADJECTIVE",
+        })
 
 def match_escape_clauses(matcher, doc, i, matches):
     global all_matches
@@ -107,11 +134,12 @@ def match_escape_clauses(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["ESCAPE CLAUSE"] = total_matches.get("ESCAPE CLAUSE", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "ESCAPE CLAUSE",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "ESCAPE CLAUSE",
+        })
         
 def match_open_ended_clauses(matcher, doc, i, matches):
     global all_matches
@@ -119,11 +147,12 @@ def match_open_ended_clauses(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["OPEN ENDED CLAUSE"] = total_matches.get("OPEN ENDED CLAUSE", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "OPEN ENDED CLAUSE",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "OPEN ENDED CLAUSE",
+        })
         
 def match_negations(matcher, doc, i, matches):
     global all_matches
@@ -131,11 +160,12 @@ def match_negations(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["AVOID NOT"] = total_matches.get("AVOID NOT", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "AVOID NOT",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "AVOID NOT",
+        })
         
 def match_vague_quantifier(matcher, doc, i, matches):
     global all_matches
@@ -143,11 +173,12 @@ def match_vague_quantifier(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["VAGUE QUANTIFIER"] = total_matches.get("VAGUE QUANTIFIER", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "VAGUE QUANTIFIER",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "VAGUE QUANTIFIER",
+        })
 
 def match_universal_quantification(matcher, doc, i, matches):
     global all_matches
@@ -155,11 +186,12 @@ def match_universal_quantification(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["UNIVERSAL QUANTIFIER"] = total_matches.get("UNIVERSAL QUANTIFIER", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "UNIVERSAL QUANTIFIER",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "UNIVERSAL QUANTIFIER",
+        })
 
 def match_temporal(matcher, doc, i, matches):
     global all_matches
@@ -167,25 +199,27 @@ def match_temporal(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["TEMPORAL DEPENDENCY"] = total_matches.get("TEMPORAL DEPENDENCY", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "TEMPORAL DEPENDENCY",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "TEMPORAL DEPENDENCY",
+        })
 
 def match_combinator(matcher, doc, i, matches):
     global all_matches
     match_id, start, end = matches[i]
     span = doc[start:end]
-    # if overlap(quantity_spans, span.start_char, span.end_char):
-    #     return
+    if overlap(quantity_spans, span.start_char, span.end_char):
+        return
     all_matches += 1
     total_matches["COMBINATOR"] = total_matches.get("COMBINATOR", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "COMBINATOR",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "COMBINATOR",
+        })
 
 def match_unachievable_absolutes(matcher, doc, i, matches):
     global all_matches
@@ -193,11 +227,12 @@ def match_unachievable_absolutes(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["UNACHIEVABLE ABSOLUTE"] = total_matches.get("UNACHIEVABLE ABSOLUTE", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "UNACHIEVABLE ABSOLUTE",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "UNACHIEVABLE ABSOLUTE",
+        })
 
 def match_parantheses(matcher, doc, i, matches):
     global all_matches
@@ -205,11 +240,12 @@ def match_parantheses(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["PARANTHESES"] = total_matches.get("PARANTHESES", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "PARANTHESES",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "PARANTHESES",
+        })
 
 def match_brackets(matcher, doc, i, matches):
     global all_matches
@@ -217,25 +253,27 @@ def match_brackets(matcher, doc, i, matches):
     span = doc[start:end]
     all_matches += 1
     total_matches["BRACKETS"] = total_matches.get("BRACKETS", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "BRACKETS",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "BRACKETS",
+        })
 
 def match_oblique(matcher, doc, i, matches):
     global all_matches
     match_id, start, end = matches[i]
     span = doc[start:end]
-    # if overlap(quantity_spans, span.start_char, span.end_char):
-    #     return
+    if overlap(quantity_spans, span.start_char, span.end_char):
+        return
     all_matches += 1
     total_matches["OBLIQUE"] = total_matches.get("OBLIQUE", 0) + 1
-    match_ents.append({
-        "start": span.start_char,
-        "end": span.end_char,
-        "label": "OBLIQUE",
-    })
+    if not overlap(match_ents, span.start_char, span.end_char) and not overlap(definitions, span.start_char, span.end_char):
+        match_ents.append({
+            "start": span.start_char,
+            "end": span.end_char,
+            "label": "OBLIQUE",
+        })
 
 def detect_ind_article(text):
     matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
@@ -256,76 +294,71 @@ def toLemmas(text):
     doc = nlp(text)
     return " ".join([token.lemma_ for token in doc]).lower()
 
-# handle undefined terms
 def detect_undefined_terms(doc, strie, defined_nouns):
     global all_matches
     for token in doc:
-      # lower case and remove punctuation
       regToken = token.text.lower().translate(str.maketrans('', '', string.punctuation))
-      # uses acronym regex (acronym pattern)
-      # if acronym is not in definitions, add as undefined term
       if acronymPattern.match(token.text) and (not regToken in defined_nouns):
         start_term = token.idx
         end_term = token.idx + len(token.text)
         all_matches += 1
         total_matches["UNDEFINED TERM"] = total_matches.get("UNDEFINED TERM", 0) + 1
-        match_ents.append({
+        if not overlap(match_ents, start_term, end_term) and not overlap(quantity_spans, start_term, end_term):
+          match_ents.append({
             "start": start_term,
             "end": end_term,
             "label": "UNDEFINED TERM"
-        })
+          })
     for chunk in doc.noun_chunks:
-      # print(chunk)
-      # remove determiner if exists and returns span of term
       term_in_noun_chunk = get_term_in_noun_chunk(strie, chunk, doc)
       start_term = term_in_noun_chunk[0]
       end_term = term_in_noun_chunk[1]
-      # check if lemmatized lowercase form is defined, if not, add to undefined terms
       if not toLemmas(doc.char_span(start_term, end_term).text.lower()) in defined_nouns:
         all_matches += 1
         total_matches["UNDEFINED TERM"] = total_matches.get("UNDEFINED TERM", 0) + 1
-        match_ents.append({
+        if not overlap(match_ents, start_term, end_term) and not overlap(quantity_spans, start_term, end_term):
+          match_ents.append({
             "start": start_term,
             "end": end_term,
             "label": "UNDEFINED TERM"
-        })
+          })
 
-# def match_unit_ambiguities(text):
-#     global all_matches
-#     previous_start = -1
-#     for quant in quantity_spans:
-#         if detect_ind_article(quant["word"]):
-#             continue
-#         if quant["entity"] == 'dimensionless' and (not is_num_mod(text, quant["start"])):
-#             all_matches += 1
-#             total_matches["MISSING UNIT"] = total_matches.get("MISSING UNIT", 0) + 1
-#             if not overlap(match_ents, quant["start"], quant["end"]):
-#                 match_ents.append({
-#                     "start": quant["start"],
-#                     "end": quant["end"],
-#                     "label": "MISSING UNIT"
-#                 })
-#         if quant["uncertainty"] == None and (not overlap(comparator_spans, previous_start, quant["start"])):
-#             all_matches += 1
-#             total_matches["NO VALUE RANGE"] = total_matches.get("NO VALUE RANGE", 0) + 1
-#             if not overlap(match_ents, quant["start"], quant["end"]):
-#                 match_ents.append({
-#                     "start": quant["start"],
-#                     "end": quant["end"],
-#                     "label": "NO VALUE RANGE"
-#                 })
-#         previous_start = quant["start"]
-#
-# def find_quantities(text):
-#     quants = parser.parse(text)
-#     for quant in quants:
-#         quantity_spans.append({
-#             "start": quant.span[0],
-#             "end": quant.span[1],
-#             "word": quant.surface,
-#             "entity": quant.unit.entity.name,
-#             "uncertainty": quant.uncertainty
-#         })
+def match_unit_ambiguities(text):
+    global all_matches
+    previous_start = -1
+    for quant in quantity_spans:
+        if detect_ind_article(quant["word"]):
+            continue
+        if quant["entity"] == 'dimensionless' and (not is_num_mod(text, quant["start"])):
+            all_matches += 1
+            total_matches["MISSING UNIT"] = total_matches.get("MISSING UNIT", 0) + 1
+            if not overlap(match_ents, quant["start"], quant["end"]):
+                match_ents.append({
+                    "start": quant["start"],
+                    "end": quant["end"],
+                    "label": "MISSING UNIT"
+                })
+        if quant["uncertainty"] == None and (not overlap(comparator_spans, previous_start, quant["start"])):
+            all_matches += 1
+            total_matches["NO VALUE RANGE"] = total_matches.get("NO VALUE RANGE", 0) + 1
+            if not overlap(match_ents, quant["start"], quant["end"]):
+                match_ents.append({
+                    "start": quant["start"],
+                    "end": quant["end"],
+                    "label": "NO VALUE RANGE"
+                })
+        previous_start = quant["start"]
+
+def find_quantities(text):
+    quants = parser.parse(text)
+    for quant in quants:
+        quantity_spans.append({
+            "start": quant.span[0],
+            "end": quant.span[1],
+            "word": quant.surface,
+            "entity": quant.unit.entity.name,
+            "uncertainty": quant.uncertainty
+        })
 
 def match_definitions(matcher, doc, i, matches):
     match_id, start, end = matches[i]
@@ -346,16 +379,14 @@ def match_comparator(matcher, doc, i, matches):
         
 def get_validator_matches(text, strie, defined_nouns, raw_terms):
     global all_matches
-    global textLength
-    textLength = len(text)
     match_ents.clear()
     total_matches.clear()
     all_matches = 0
-    # quantity_spans.clear()
+    quantity_spans.clear()
     comparator_spans.clear()
     definitions.clear()
 
-    # find_quantities(text)
+    find_quantities(text)
 
     definitionMatcher = PhraseMatcher(nlp.vocab, attr="LEMMA")
     definitionPatterns = [nlp(text) for text in list(defined_nouns)]
@@ -364,10 +395,6 @@ def get_validator_matches(text, strie, defined_nouns, raw_terms):
     matcher = Matcher(nlp.vocab, validate=True)
     phraseMatcher = PhraseMatcher(nlp.vocab, attr="LEMMA")
     exactMatcher = PhraseMatcher(nlp.vocab, attr="LOWER")
-    
-    pastTenseVerbPattern1 = [{"LEMMA": "be"}, {"TAG": "VBD"}]
-    pastTenseVerbPattern2 = [{"LEMMA": "be"}, {"TAG": "VBN"}]
-    matcher.add("Passive Voice", match_passive, pastTenseVerbPattern1, pastTenseVerbPattern2)
     
     comparatorPattern1 = [{"ORTH": {"REGEX": "\w+er"}}, {"LOWER": "than"}]
     comparatorPattern2 = [{"LOWER": "less"}, {"LOWER": "than"}]
@@ -379,6 +406,9 @@ def get_validator_matches(text, strie, defined_nouns, raw_terms):
    
     adverbPattern = [{"POS": "ADV", "ORTH": {"REGEX": "\w+ly"}}]
     matcher.add("Adverbs", match_adverb, adverbPattern)
+
+    pastTenseVerbPattern1 = [{"LEMMA": "be"}, {"TAG": "VBD"}]
+    matcher.add("Passive Voice", match_passive, pastTenseVerbPattern1)
 
     infinitivePattern1 = [{"LOWER": "be"}, {"POS": "ADJ"}, {"POS": "ADP"}]
     infinitivePattern2 = [{"LOWER": "to"}, {"POS": "VERB"}]
@@ -442,21 +472,20 @@ def get_validator_matches(text, strie, defined_nouns, raw_terms):
     doc = nlp(text)
     lowercaseDoc = nlp(text.lower())
     definitionMatches = definitionMatcher(lowercaseDoc)
-#    spell_check(lowercaseDoc, raw_terms)
+    spell_check(lowercaseDoc, raw_terms)
     matches = matcher(doc)
     phraseMatches = phraseMatcher(lowercaseDoc)
     exactMatches = exactMatcher(lowercaseDoc)
-    # match_unit_ambiguities(text)
+    match_unit_ambiguities(text)
     c = '.'
     periods = [pos for pos, char in enumerate(doc.text) if char == c]
     if len(list(doc.sents)) > 1 and len(periods) > 1:
-      total_matches["MULTIPLE SENTENCES"] = total_matches.get("MULTIPLE SENTENCES", 0) + 1
-      match_ents.append({
+      sentence_matcher = [{
             "start": 0,
             "end": len(text),
             "label": "MULTIPLE SENTENCES",
-      })
-      all_matches += 1
+      }]
+      return sentence_matcher, all_matches + 1, total_matches
     detect_undefined_terms(doc, strie, defined_nouns)
     match_ents.sort(key=lambda x: x["start"])
     return match_ents, all_matches, total_matches
